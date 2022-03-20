@@ -1,24 +1,21 @@
 <template>
   <div class="list">
     <div class="list__singleItem" v-for="item in data" :key="item.id">
-      <div
-        @click="emitItem(item.id, item.title)"
-        class="list__singleItem--title"
-        v-bind:style="[
-          currentId == item.id
-          ? { border: 'dotted' }
-          : { border: 'none'}
-        ]"
-      >
-        {{ item.title }}
-      </div>
+      <container-list-item
+        :id="item.id"
+        :title="item.title"
+        :currentId="currentId"
+        @emitItem="emitItem"
+      ></container-list-item>
     </div>
   </div>
 </template>
 
 <script>
+import ContainerListItem from "./ContainerListItem.vue";
 export default {
   name: "ContainerList",
+  components: { ContainerListItem },
   props: {
     data: [],
   },
@@ -31,7 +28,6 @@ export default {
         return false;
       }
     },
-
   },
   data() {
     return {
