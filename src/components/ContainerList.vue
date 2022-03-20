@@ -51,9 +51,4 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(1fr, 100px);
 }
-.list__singleItem {
-  cursor: pointer;
-  height: 2em;
-  margin: 10px;
-}
 </style>
