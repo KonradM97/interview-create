@@ -20,7 +20,7 @@ export default {
     data: [],
   },
   emits: {
-    emitId: function (id) {
+    emitItem: function (id) {
       if (id) {
         return true;
       } else {
@@ -37,8 +37,7 @@ export default {
   methods: {
     emitItem(id, title) {
       this.currentId = id;
-      this.$emit("emitId", id);
-      this.$emit("emitTitle", title);
+      this.$emit("emitItem", id, title);
     },
   },
 };

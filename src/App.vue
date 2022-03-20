@@ -6,8 +6,7 @@
       v-model="currentTitle"
     />
     <container-list
-      @emitId="setCurrId"
-      @emitTitle="setCurrTitle"
+      @emitItem="setActiveItem"
       :data="container.getList()"
     ></container-list>
   </div>
@@ -37,13 +36,10 @@ export default {
     showContainer() {
       this.container.shuffle();
     },
-    setCurrId(id) {
+    setActiveItem(id,title) {
       this.currentId = id;
-    },
-    setCurrTitle(title)
-    {
       this.currentTitle = title;
-    }
+    },
   },
   watch: {
     currentTitle: function()
