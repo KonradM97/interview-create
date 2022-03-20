@@ -13,7 +13,6 @@
   </div>
 </template>
 <script>
-//fsdfsd
 import ContainerList from "./components/ContainerList.vue";
 import Container from "./modules/Container.js";
 export default {
