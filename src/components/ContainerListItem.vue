@@ -4,11 +4,11 @@
         class="list__singleItem"
         v-bind:style="[
           currentId == id
-          ? { border: 'dotted' }
-          : { border: 'none'}
+          ? { outline: '1px dotted black' }
+          : { outline: 'none'}
         ]">
         {{ title }}
-      </div>
+      </div> 
 </template>
 <script>
 export default {
@@ -61,6 +61,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .list__singleItem {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 8px 0;
   cursor: pointer;
   height: 2em;
   margin: 10px;
