@@ -1,7 +1,7 @@
 <template>
       <div
         @click="emitItem(id, title)"
-        class="list__singleItem"
+        class="listItem"
         v-bind:style="[
           currentId == id
           ? { outline: '1px dotted black' }
@@ -60,12 +60,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.list__singleItem {
+.listItem {
   box-sizing: border-box;
   text-align: center;
   padding: 8px 0;
   cursor: pointer;
-  height: 2em;
   margin: 10px;
 }
 </style>
