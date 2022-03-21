@@ -16,6 +16,8 @@ export default class Container {
     {
         return this._data;
     }
+    /** Funkcja mieszająca]
+     *  @function */
     shuffle()
     {
         this._data = this._data.sort(() => Math.random() - 0.5);
