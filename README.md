@@ -1,6 +1,6 @@
 # interview-create
 
-## Desccription
+## Description
 
 Aplikacja wyświetla 6 obiektów z własnym id i tytułem. Komponent ContainerList wyświetla te obiekty w liście (pętli) a sam pojedynczy obiekt wyświetla ContainerListItem
 
