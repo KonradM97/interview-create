@@ -1,5 +1,6 @@
 <template>
-      <div
+      <div 
+        v-tooltip="{content: 'Id: ' + id, classes: 'dynamicSize'}"
         @click="emitItem(id, title)"
         class="listItem"
         v-bind:style="[
@@ -58,12 +59,22 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .listItem {
   box-sizing: border-box;
   text-align: center;
   padding: 8px 0;
   cursor: pointer;
   margin: 10px;
+}
+.tooltip{
+  background-color: rgba(240, 240, 240, 80);
+  opacity: 80%;
+  border-radius: 5px;
+  text-align: center;
+  width: fit-content;
+}
+.tooltip-inner{
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>

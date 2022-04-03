@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <button @click="showContainer">{{ buttonName }}</button>
+    <button @click="addItem">{{buttonName2}}</button>
     <input
       v-if="currentId != -1"
       v-model="currentTitle"
@@ -14,12 +15,14 @@
 <script>
 import ContainerList from "./components/ContainerList.vue";
 import Container from "./modules/Container.js";
+
 export default {
   name: "App",
   components: { ContainerList },
   data() {
     return {
       buttonName: "Mieszaj",
+      buttonName2: "Dodaj",
       container: new Container([
         { id: 0, title: "Nazwa1" },
         { id: 1, title: "Nazwa2" },
@@ -35,6 +38,11 @@ export default {
   methods: {
     showContainer() {
       this.container.shuffle();
+    },
+    addItem()
+    {
+      let newId = this.container.getList().length;
+      this.container.addItem({ id: newId, title: "Nazwa"+ (newId+1) });
     },
     setActiveItem(id,title) {
       this.currentId = id;

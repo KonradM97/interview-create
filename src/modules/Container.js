@@ -16,6 +16,10 @@ export default class Container {
     {
         return this._data;
     }
+    addItem(item)
+    {
+        this._data.push(item);
+    }
     /** Funkcja mieszająca
      *  @function */
     shuffle()
